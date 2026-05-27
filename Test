@@ -1,0 +1,9 @@
+# test functions
+
+from starter_notebook import savings_tool
+
+print(savings_tool(5000, 3000))
+
+assert savings_tool(5000, 3000) == "You can save $2000 this month."
+
+print("test passed")
