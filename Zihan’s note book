@@ -1,0 +1,81 @@
+## Step 1: Understand the Problem
+
+This project helps users understand their spending.
+
+The user uploads a CSV file and the program shows spending information.
+
+The chatbot also gives some simple finance advice.
+## Step 2: Inputs and Outputs
+
+Inputs:
+- CSV file
+- user message
+- income and expenses
+
+Outputs:
+- spending summary
+- chatbot response
+- savings result
+## Step 3: Work the Problem by Hand
+
+Example:
+
+Food = $20
+Shopping = $50
+Transport = $10
+
+Total = $80
+
+Highest spending category = Shopping
+## Step 4: Pseudocode
+
+1. Upload CSV
+2. Read CSV with pandas
+3. Calculate spending
+4. Find highest category
+5. Show result
+import pandas as pd
+
+def analyze_budget(file):
+
+    df = pd.read_csv(file.name)
+
+    total = df["Amount"].sum()
+
+    category_total = df.groupby("Category")["Amount"].sum()
+
+    highest = category_total.idxmax()
+
+    result = f"""
+    Total spending: ${total}
+
+    Highest category:
+    {highest}
+
+    Category summary:
+    {category_total.to_string()}
+    """
+
+    return result
+def finance_chat(message):
+
+    message = message.lower()
+
+    if "save" in message:
+        return "Try to reduce shopping spending."
+
+    elif "budget" in message:
+        return "Monthly budget can help save money."
+
+    else:
+        return "Please upload a CSV file."
+def savings_tool(income, expenses):
+
+    savings = income - expenses
+
+    return f"You can save ${savings} this month."
+assert savings_tool(3000, 2000) == "You can save $1000 this month."
+
+assert finance_chat("budget") == "Monthly budget can help save money."
+
+print("Tests finished")
