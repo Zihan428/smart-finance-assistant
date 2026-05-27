@@ -1,0 +1,49 @@
+# Developer Diary
+
+## Week 8
+
+This week I started planning the project.
+
+I looked at the assignment instructions and thought about the project idea.
+
+I decided to make a budget assistant because it looked easier to understand.
+
+---
+
+## Week 9
+
+This week I worked on reading CSV files.
+
+At first I had some problems because the CSV column names were incorrect.
+
+After fixing the CSV file, the program worked better.
+
+---
+
+## Week 10
+
+This week I added the chatbot function.
+
+The chatbot is simple but it can answer some finance questions.
+
+I used if statements to create different responses.
+
+---
+
+## Week 11
+
+I worked on the Gradio interface this week.
+
+The buttons did not work at first because the outputs were incorrect.
+
+After checking the code, I fixed the problem.
+
+---
+
+## Week 12
+
+This week I finished testing and updated the README.
+
+I tested different CSV files and fixed some small problems.
+
+The project is now working correctly.
